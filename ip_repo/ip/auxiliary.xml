@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="measure_con" xd:componentRef="measure_con" xd:initiationInterval="2" xd:clockPeriod="7.500" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="*(counter_in)" xd:originalName="counter_in" xd:direction="in" xd:interfaceRef="counter_in_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="*(countdone_in)" xd:originalName="countdone_in" xd:direction="in" xd:interfaceRef="countdone_in_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1"/>
+  <xd:arg xd:name="*(start_out)" xd:originalName="start_out" xd:direction="out" xd:interfaceRef="start_out_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1" xd:firstOut="0"/>
+  <xd:arg xd:name="*(reset_out)" xd:originalName="reset_out" xd:direction="out" xd:interfaceRef="reset_out_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1" xd:firstOut="0"/>
+  <xd:arg xd:name="*(result_count)" xd:originalName="result_count" xd:direction="out" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:dataWidth="32" xd:offset="0x10" xd:handshakeRef="ap_vld" xd:statusOffset="0x14"/>
+  <xd:arg xd:name="*(rgb_led)" xd:originalName="rgb_led" xd:direction="out" xd:interfaceRef="rgb_led_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="3" xd:firstOut="0"/>
+  <xd:arg xd:name="measure_start" xd:originalName="measure_start" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:dataWidth="1" xd:offset="0x18" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="*(result_finished)" xd:originalName="result_finished" xd:direction="out" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:dataWidth="1" xd:offset="0x20" xd:handshakeRef="ap_vld" xd:statusOffset="0x24"/>
+  <xd:arg xd:name="measure_reset" xd:originalName="measure_reset" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:dataWidth="1" xd:offset="0x28" xd:handshakeRef="ap_none"/>
+  <xd:latencyEstimates xd:best-case="1" xd:worst-case="1" xd:average-case="1"/>
+  <xd:resourceEstimates xd:LUT="197" xd:FF="102" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>
