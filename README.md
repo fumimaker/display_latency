@@ -7,7 +7,7 @@ Usage and details here (Japanese) → https://fumimaker.net/entry/2022/06/14/205
 This system can measure the delay of an HDMI display: it outputs an HDMI signal, measures the delay time until the display emits light and returns as light. I need a phototransistor, a resistor, and a breadboard.
 
 ![2022-06-13 23.57.15](https://raw.githubusercontent.com/fumimaker/Public_Images/main/Images/20220614_1655132423_2022-06-13%2023.57.15.jpg)
-
+![HDMI.drawio](https://raw.githubusercontent.com/fumimaker/Public_Images/main/Images/20220614_1655213995.png)
 ## Environments
 
 - Vivado 2019.2
