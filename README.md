@@ -19,16 +19,16 @@ This system can measure the delay of an HDMI display: it outputs an HDMI signal,
 
 ## Build FPGA system
 
-1. download or clone this repo
+### 1. download or clone this repo
 
 `git clone https://github.com/fumimaker/display_latency.git`
 
-2. download or clone digilent vivado-library
+### 2. download or clone digilent vivado-library
 
 `git clone https://github.com/Digilent/vivado-library.git`
 
-3. Copy rgb2dvi from vivado-library under ip_repo in this repository
-4. Create project on the Vivado
+### 3. Copy rgb2dvi from vivado-library under ip_repo in this repository
+### 4. Create project on the Vivado
 
 `source ./display_latency.tcl`
 
@@ -41,10 +41,11 @@ This system can measure the delay of an HDMI display: it outputs an HDMI signal,
 
 These errors are not problem.
 
-5. Generate bitstream on vivado
-6. Export hardware on vivado
-7. Open Vitis and create helloworld project.
-8. Import a source code src/vitis/main.c on vitis (or overwrite helloworld.c)
+### 5. Generate bitstream on vivado
+### 6. Export hardware on vivado
+### 7. Open Vitis and create helloworld project.
+### 8. Import a source code
+src/vitis/main.c on vitis (or overwrite helloworld.c)
 
 ![image-20220611231134200](https://raw.githubusercontent.com/fumimaker/Public_Images/main/Images/20220611_1654956694_image-20220611231134200.png)
 
