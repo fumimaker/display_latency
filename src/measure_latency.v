@@ -46,7 +46,7 @@ reg count_en;
 reg[31:0] delayCounter;
 reg[11:0] CounterX;
 reg[10:0] CounterY;
- 
+
 assign delayclock_out = delayCounter;
 
 
@@ -83,15 +83,18 @@ always @(posedge CLK) begin
         count_en <= 0;
         done_out <= 0;
     end else begin
-        if(start_in==1)begin //measure start button
+        // measure start
+        if(start_in==1)begin
             count_en <= 1;
             led <= led | 4'b0001;
         end
-    
+
+        // wait for synchronization
         if(count_en==1 && CounterX==0 && CounterY==0)begin
             flg <= 1;
         end
-    
+
+        // delay counting
         if(flg==1) begin
             data_out <= 24'hffffff;
             delayCounter <= delayCounter+1;
@@ -101,15 +104,17 @@ always @(posedge CLK) begin
         end else begin
             data_out <= 24'h000000;
         end
-    
-        if(sensor_in==0)begin //sensor detected
-            flg <= 0; //display stop & count stop
+
+        // sensor detected
+        if(sensor_in==1)begin
+            flg <= 0; //display stop & count stop, wait for reset
             count_en <= 0;
             led <= led | 4'b0100;
             done_out <= 1;
         end
-    
-        if(cleardata_in==1)begin //reset state
+
+        // reset state
+        if(cleardata_in==1)begin
             flg <= 0;
             delayCounter <= 0;
             count_en <= 0;
